@@ -34,7 +34,7 @@ class _HttpLogListWidgetState extends State<HttpLogListWidget> {
         ),
         backgroundColor: theme.scaffoldBackgroundColor,
         elevation: 1.0,
-        iconTheme: theme.iconTheme,
+        iconTheme: theme.iconTheme.copyWith(color: Colors.black87),
         actions: <Widget>[
           InkWell(
             onTap: _updateOverlayState,
