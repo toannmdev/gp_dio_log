@@ -44,10 +44,10 @@ LogPoolManager.getInstance().maxCount = 100;
 ```
 
 ### Screenshot 
-![Log list](https://github.com/toannmdev/gp_dio_log/tree/master/images/log_list.jpg)
-![Log request](https://github.com/toannmdev/gp_dio_log/tree/master/images/log_request.jpg)
-![Log response](https://github.com/toannmdev/gp_dio_log/tree/master/images/log_response.jpg)
+![Log list](https://raw.githubusercontent.com/toannmdev/gp_dio_log/master/images/log_list.jpg)
+![Log request](https://raw.githubusercontent.com/toannmdev/gp_dio_log/master/images/log_request.jpg)
+![Log response](https://raw.githubusercontent.com/toannmdev/gp_dio_log/master/images/log_response.jpg)
 
 
 ### gif demo 
-![Gif](https://github.com/toannmdev/gp_dio_log/tree/master/images/gp_dio_log_example.gif)
+![Gif](https://raw.githubusercontent.com/toannmdev/gp_dio_log/master/images/gp_dio_log_example.gif)
