@@ -57,7 +57,7 @@ class GPDioLogInterceptor implements Interceptor {
   }
 
   String _cURLRepresentation(RequestOptions options) {
-    List<String> components = ["\$ curl -i"];
+    List<String> components = ["curl -i"];
     components.add("-X ${options.method}");
 
     options.headers.forEach((k, v) {
