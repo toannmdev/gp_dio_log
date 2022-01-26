@@ -60,7 +60,7 @@ class _DraggableButtonWidgetState extends State<DraggableButtonWidget> {
     var tap = () {
       Navigator.of(context).push(
         MaterialPageRoute(
-          builder: (context) => HttpLogListWidget(),
+          builder: (context) => HttpLogListWidget(hint: "All http requests from dio"),
         ),
       );
     };

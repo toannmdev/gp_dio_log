@@ -8,6 +8,10 @@ import 'gp_dio_log.dart';
 import 'page/log_widget.dart';
 
 class HttpLogListWidget extends StatefulWidget {
+  const HttpLogListWidget({this.hint, Key? key}) : super(key: key);
+
+  final String? hint;
+
   @override
   _HttpLogListWidgetState createState() => _HttpLogListWidgetState();
 }
@@ -62,12 +66,26 @@ class _HttpLogListWidgetState extends State<HttpLogListWidget> {
       ),
       body: logMap!.length < 1
           ? Center(child: Text('no request log'))
-          : ListView.builder(
-              reverse: false,
-              itemCount: keys!.length,
-              itemBuilder: (BuildContext context, int index) => _LogItem(
-                item: logMap![keys![index]]!,
-              ),
+          : Column(
+              children: [
+                if (widget.hint != null && widget.hint!.isNotEmpty)
+                  Padding(
+                    padding: const EdgeInsets.all(10),
+                    child: Text(
+                      widget.hint!,
+                      textAlign: TextAlign.center,
+                      style: Style.defText.copyWith(color: Colors.red),
+                    ),
+                  ),
+                Expanded(
+                  child: ListView.builder(
+                    reverse: false,
+                    itemCount: keys!.length,
+                    itemBuilder: (BuildContext context, int index) =>
+                        _LogItem(item: logMap![keys![index]]!),
+                  ),
+                )
+              ],
             ),
     );
   }
