@@ -1,5 +1,6 @@
 
 # gp_dio_log
+## Added curl
 #### HTTP Inspector tool for Dart which can debugging http requests，Currently, DIO based HTTP capture is implemented
 #### Of course, you can implement an Interceptor instead of a DiologInterceptor to adapt to other HTTP clients
 #### Thank to (https://github.com/flutterplugin/dio_log)
@@ -11,14 +12,13 @@ dependencies:
 ```
 ### [github](https://github.com/toannmdev/gp_dio_log)
 ```
-gp_dio_log:
-  git:
-    url: https://github.com/toannmdev/gp_dio_log
-    ref: master
+  gp_dio_log:
+    git:
+      url: https://github.com/toannmdev/gp_dio_log
 ```
 ### set interceptor of dio
 ```
-dio.interceptors.add(DioLogInterceptor());
+dio.interceptors.add(GPDioLogInterceptor());
 ```
 ### Add a global hover button on your home page to jump through the log list
 ```

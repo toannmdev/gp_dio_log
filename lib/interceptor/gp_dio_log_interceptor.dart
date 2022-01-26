@@ -7,9 +7,9 @@ import 'package:gp_dio_log/bean/res_options.dart';
 
 import '../gp_dio_log.dart';
 
-class DioLogInterceptor implements Interceptor {
+class GPDioLogInterceptor implements Interceptor {
   LogPoolManager? logManage;
-  DioLogInterceptor() {
+  GPDioLogInterceptor() {
     logManage = LogPoolManager.getInstance()!;
   }
 
@@ -71,7 +71,7 @@ class DioLogInterceptor implements Interceptor {
         var data = json.encode(options.data);
         data = data.replaceAll('"', '\\"');
         components.add("-d \"$data\"");
-      } catch (e, s) {}
+      } catch (e) {}
     }
 
     components.add("\"${options.uri.toString()}\"");
