@@ -57,7 +57,7 @@ class GPDioLogInterceptor implements Interceptor {
   }
 
   String _cURLRepresentation(RequestOptions options) {
-    List<String> components = ["curl -i"];
+    List<String> components = ["curl -i "];
     components.add("-X ${options.method}");
 
     options.headers.forEach((k, v) {
@@ -76,6 +76,6 @@ class GPDioLogInterceptor implements Interceptor {
 
     components.add("\"${options.uri.toString()}\"");
 
-    return components.join('\\\n\t');
+    return components.join('\\\n\t ');
   }
 }
