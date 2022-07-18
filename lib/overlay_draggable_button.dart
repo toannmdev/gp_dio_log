@@ -5,7 +5,7 @@ import 'gp_dio_log.dart';
 OverlayEntry? itemEntry;
 
 showDebugBtn(BuildContext context, {Widget? button, Color? btnColor}) {
-  WidgetsBinding.instance!.addPostFrameCallback((_) {
+  WidgetsBinding.instance.addPostFrameCallback((_) {
     dismissDebugBtn();
     itemEntry = OverlayEntry(
         builder: (BuildContext context) =>
