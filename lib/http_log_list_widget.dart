@@ -26,6 +26,10 @@ class _HttpLogListWidgetState extends State<HttpLogListWidget> {
     keys = LogPoolManager.getInstance()!.keys;
     final theme = Theme.of(context);
 
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
+      _updateOverlayState();
+    });
+
     return Scaffold(
       appBar: AppBar(
         title: Text(
