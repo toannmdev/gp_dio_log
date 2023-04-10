@@ -33,7 +33,7 @@ class DraggableButtonWidget extends StatefulWidget {
   final Color? btnColor;
 
   DraggableButtonWidget({
-    this.title = 'Show Http log',
+    this.title = 'Show log',
     this.onTap,
     this.btnSize = 66,
     this.btnColor,
@@ -69,7 +69,7 @@ class _DraggableButtonWidgetState extends State<DraggableButtonWidget> {
     };
     Widget w;
     Color primaryColor = widget.btnColor ?? Theme.of(context).primaryColor;
-    primaryColor = primaryColor.withOpacity(0.6);
+    // primaryColor = primaryColor.withOpacity(0.6);
     w = GestureDetector(
       onTap: widget.onTap as void Function()? ?? tap,
       onPanUpdate: _dragUpdate,
