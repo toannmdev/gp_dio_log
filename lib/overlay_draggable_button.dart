@@ -68,7 +68,7 @@ class _DraggableButtonWidgetState extends State<DraggableButtonWidget> {
       );
     };
     Widget w;
-    Color primaryColor = widget.btnColor ?? Theme.of(context).primaryColor;
+    Color primaryColor = widget.btnColor ?? Colors.redAccent;// Theme.of(context).primaryColor;
     // primaryColor = primaryColor.withOpacity(0.6);
     w = GestureDetector(
       onTap: widget.onTap as void Function()? ?? tap,
