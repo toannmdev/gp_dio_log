@@ -16,8 +16,10 @@ showDebugBtn(BuildContext context, {Widget? button, Color? btnColor}) {
 }
 
 dismissDebugBtn() {
-  itemEntry?.remove();
-  itemEntry = null;
+  try {
+    itemEntry?.remove();
+    itemEntry = null;
+  } catch (ex) {}
 }
 
 bool debugBtnIsShow() {
@@ -60,7 +62,8 @@ class _DraggableButtonWidgetState extends State<DraggableButtonWidget> {
     var tap = () {
       Navigator.of(context).push(
         MaterialPageRoute(
-          builder: (context) => HttpLogListWidget(hint: "All http requests from dio"),
+          builder: (context) =>
+              HttpLogListWidget(hint: "All http requests from dio"),
         ),
       );
     };

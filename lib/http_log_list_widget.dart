@@ -21,6 +21,13 @@ class _HttpLogListWidgetState extends State<HttpLogListWidget> {
   List<String>? keys;
 
   @override
+  void initState() {
+    super.initState();
+
+    showDebugBtn(context);
+  }
+
+  @override
   Widget build(BuildContext context) {
     logMap = LogPoolManager.getInstance()!.logMap;
     keys = LogPoolManager.getInstance()!.keys;
